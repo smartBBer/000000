@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<style>
+    @font-face {
+        font-family: 'icomoon';
+        src: url('css/fonts/icomoon.eot?p154wv');
+        src: url('css/fonts/icomoon.eot?p154wv#iefix') format('embedded-opentype'),
+        url('css/fonts/icomoon.ttf?p154wv') format('truetype'),
+        url('css/fonts/icomoon.woff?p154wv') format('woff'),
+        url('css/fonts/icomoon.svg?p154wv#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .icon-home:before {
+        content: "\e901";
+    }
+
+    .icon-drawer:before {
+        content: "\e95d";
+    }
+
+    .icon-list:before {
+        content: "\e9bb";
+    }
+
+    .icon-price-tags:before {
+        content: "\e937";
+    }
+
+    .icon-file-text2:before {
+        content: "\e927";
+    }
+
+    .icon-embed2:before {
+        content: "\ea81";
+    }
+
+    /*    @font-face {
+            font-family: 'iconfont';  /* project id 486882 /
+            src: url('//at.alicdn.com/t/font_486882_q58oin2txnefjemi.eot');
+            src: url('//at.alicdn.com/t/font_486882_q58oin2txnefjemi.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_486882_q58oin2txnefjemi.woff') format('woff'),
+            url('//at.alicdn.com/t/font_486882_q58oin2txnefjemi.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_486882_q58oin2txnefjemi.svg#iconfont') format('svg');
+        }
+    使用在线阿里矢量图标，不过显示不了*/
+    .iconfont {
+        /*  font-family:"iconfont";*/
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px; /*用于描边文字*/
+        -moz-osx-font-smoothing: grayscale; /*对字体的锯齿进行调整，设置grayscale对于图标字体表现更清晰*/
+        padding-left: 5px
+    }
+
+    .icon-compass:before {
+        content: "\e94a";
+    }
+
+    .icon-qq:before {
+        content: "\e900";
+    }
+
+    .icon-github:before {
+        content: "\eab1";
+    }
+
+    .icon-bubbles2:before {
+        content: "\e96e";
+    }
+
+    .icon-search:before {
+        content: "\e987";
+    }
+
+    #menu .nva li {
+        line-height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu a:hover {
+        background: none;
+    }
+
+
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ber's Blog | 越努力，越幸运</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="logo.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="/logo.ico"/>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--<link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/iconfont.css">-->
+</head>
+<body>
+
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+<div id="loading" class="active"></div>
+<!--侧边菜单-->
+<aside id="menu">
+    <div>
+        <div class="brand-wrap">
+            <div class="brand">
+                <a href="/" class="avatar waves-effect waves-circle waves-light">
+                    <img src="logo.svg" width="80" height="80" alt="logo"
+                         style="background-color: rgba(255, 255,255,1)">
+                </a>
+                <h5 class="nickname">Ber<br>微信公众号：Baiman_Ber</h5>
+                <a href="mailto:berbai@qq.com" title="berbai@qq.com" class="mail">berbai@qq.com</a>
+            </div>
+        </div>
+        <div class="scroll-wrap flex-col">
+            <ul class="nav">
+
+                <li class="waves-block waves-effect active">
+                    <a href="/">
+                        <i class="icon icon-lg icon-home iconfont"></i>
+                        主页
+                    </a>
+                </li>
+
+                <li class="waves-block waves-effect">
+                    <a href="/">
+                        <i class="icon icon-lg icon-drawer iconfont"></i>
+                        归档
+                        <span id="site.posts.length" class="digit"></span>
+                    </a>
+                </li>
+
+                <li class="waves-block waves-effect">
+                    <a href="/">
+                        <i class="icon icon-lg icon-list iconfont"></i>
+                        分类
+                        <span id="site.categories.length iconfont" class="digit"></span>
+                    </a>
+                </li>
+
+                <li class="waves-block waves-effect">
+                    <a href="#">
+                        <i class="icon icon-lg icon-price-tags iconfont"></i>
+                        标签
+                        <span id="site.tags.length" class="digit"></span>
+                    </a>
+                </li>
+
+                <li class="waves-block waves-effect">
+                    <a href="#">
+                        <i class="icon icon-lg icon-file-text2 iconfont"></i>
+                        我的项目
+                    </a>
+                </li>
+
+                <li class="waves-block waves-effect">
+                    <a href="#">
+                        <i class="icon icon-lg icon-embed2 iconfont"></i>
+                        算法模板
+                    </a>
+                </li>
+
+
+                <ul class="nav2">
+
+                    <li class="waves-block waves-effect">
+                        <a href="#" title="关于">
+                            <i class="icon icon-lg icon-compass compass iconfont"></i>
+                        </a>
+                    </li>
+
+                    <li class="waves-block waves-effect ">
+                        <a href="#" title="留言">
+                            <i class="icon icon-lg icon-bubbles2 bubbles iconfont"></i>
+                        </a>
+                    </li>
+
+                    <li class="waves-block waves-effect">
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=154201580&site=qq&menu=yes" target="_blank"
+                           title="QQ联系">
+                            <i class="icon icon-lg icon-qq qq iconfont"></i>
+                        </a>
+                    </li>
+
+                    <li class="waves-block waves-effect">
+                        <a href="https://github.com/xiaozhan57" target="_blank" title="github">
+                            <i class="icon icon-lg icon-github github iconfont"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </ul>
+        </div>
+    </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+        <div class="flex-row">
+            <div style="color: #ffffff; background: #4186c2; position: relative;text-align:center; font-size: 20px;">
+                <br>Ber‘s Blog<br>越努力，越幸运<br>
+                <p><br></p>
+            </div>
+
+            <div style="padding-left:50px; padding-right:50px;">
+                <div class="totle" style="background: #bff1f5">
+                    <div style="padding-left: 15px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px;">
+                        <h2 class="title-color">我的第一篇博客</h2>
+                        <time datetime="2017-11-25 10:45" style="font-size: 12px; line-height: 24px; font-weight: bold; color:#727272;">
+                            2017-11-25 10:45
+                        </time>
+                        <p>这是一个弄了一个星期的博客，开始居然连css文件都没有导入，笑哭！！！</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="padding-top: 15px;"></div>
+
+            <div style="padding-left:50px; padding-right:50px;">
+                <div class="totle" style="background: #bff1f5">
+                    <div style="padding-left: 15px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px;">
+                        <h2 class="title-color">我的第二篇博客</h2>
+                        <time datetime="2017-11-25 10:57" style="font-size: 12px; line-height: 24px; font-weight: bold; color:#727272;">
+                            2017-11-25 10:57
+                        </time>
+                        <p>有些事不是看到希望才去坚持，而是坚持了才会看得到希望！<br><img src="img/go.jpg" class="img-position"></p>
+                    </div>
+                </div>
+
+            </div>
+            <div></div>
+        </div>
+    </header>
+</main>
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+<!--用于搜索框js,弄了几天，算-->了
+<script src='js/stopExecutionOnTimeout.js?t=1'></script>
+<script src='http://libs.useso.com/js/jquery/1.11.0/jquery.min.js'></script>
+<script src='js/snap.svg-min.js'></script>
+<script>
+    $(document).ready(function () {
+        var $search = $('.search'), $input = $('.search-input'), $close = $('.search-close'),
+            $svg = $('.search-svg'), $path = $('.search-svg__path')[0], initD = $svg.data('init'),
+            midD = $svg.data('mid'), finalD = $svg.data('active'), backDelay = 400, midAnim = 200, bigAnim = 400,
+            animating = false;
+        $(document).on('click', '.search:not(.active)', function () {
+            if (animating)
+                return;
+            animating = true;
+            $search.addClass('active');
+            Snap($path).animate({'path': midD}, midAnim, mina.backin, function () {
+                Snap($path).animate({'path': finalD}, bigAnim, mina.easeinout, function () {
+                    $input.addClass('visible');
+                    $input.focus();
+                    $close.addClass('visible');
+                    animating = false;
+                });
+            });
+        });
+        $(document).on('click', '.search-close', function () {
+            if (animating)
+                return;
+            animating = true;
+            $input.removeClass('visible');
+            $close.removeClass('visible');
+            $search.removeClass('active');
+            setTimeout(function () {
+                Snap($path).animate({'path': midD}, bigAnim, mina.easeinout, function () {
+                    Snap($path).animate({'path': initD}, midAnim, mina.easeinout, function () {
+                        animating = false;
+                    });
+                });
+            }, backDelay);
+        });
+    });
+</script>
+</body>
+</html>
